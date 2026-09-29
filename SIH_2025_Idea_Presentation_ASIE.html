@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIH 2025 Idea Presentation — ASIE Adaptive Sonar Transmitter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==========================================================================
+           SIH 2025 OFFICIAL TEMPLATE STYLING
+           16:9 Aspect Ratio Presentation Slides
+           ========================================================================== */
+        
+        :root {
+            --sih-blue: #0072CE;
+            --sih-dark-blue: #004080;
+            --sih-light-bg: #FFFFFF;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --accent-green: #10B981;
+            --accent-cyan: #06B6D4;
+            --accent-purple: #8B5CF6;
+            --accent-orange: #F97316;
+            --accent-red: #EF4444;
+            --border-color: #E2E8F0;
+            --card-bg: #F8FAFC;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0F172A;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: var(--sih-light-bg);
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* SIH Header Ribbon */
+        .sih-slide-header {
+            height: 80px;
+            padding: 10px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .team-badge {
+            width: 90px;
+            height: 50px;
+            border: 2px solid var(--sih-blue);
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--sih-blue);
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .slide-title-header {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .sih-logo-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sih-logo-img {
+            height: 55px;
+        }
+
+        .sih-logo-text {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            line-height: 1.1;
+            text-align: right;
+        }
+
+        /* Slide Body Content */
+        .slide-body {
+            flex: 1;
+            padding: 10px 40px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* SIH Blue Footer Bar */
+        .sih-footer {
+            height: 36px;
+            background: var(--sih-blue);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* ==========================================================================
+           SLIDE 1 SPECIFIC STYLING — TITLE PAGE
+           ========================================================================== */
+        .slide-1-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .sih-header-main-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .sih-title-box {
+            background: linear-gradient(135deg, rgba(0,114,206,0.08) 0%, rgba(0,64,128,0.04) 100%);
+            border: 2px solid var(--sih-blue);
+            border-radius: 8px;
+            padding: 20px 30px;
+            width: 100%;
+            max-width: 1100px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,114,206,0.1);
+        }
+
+        .project-main-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .project-tagline {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .title-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+            max-width: 1100px;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--sih-blue);
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .info-card strong {
+            color: var(--sih-dark-blue);
+        }
+
+        .hero-architecture-bar {
+            width: 100%;
+            max-width: 1100px;
+            background: #0F172A;
+            color: #FFFFFF;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 12px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero-step {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-step .icon {
+            color: var(--accent-cyan);
+            font-size: 14px;
+        }
+
+        .hero-arrow {
+            color: var(--sih-blue);
+            font-weight: bold;
+        }
+
+        /* ==========================================================================
+           SLIDE 2 SPECIFIC STYLING — PROPOSED SOLUTION
+           ========================================================================== */
+        .section-header-banner {
+            background: rgba(0,114,206,0.08);
+            border-left: 5px solid var(--sih-blue);
+            padding: 8px 14px;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flow-diagram-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            background: #F1F5F9;
+            border: 1px solid var(--border-color);
+            padding: 12px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .flow-node {
+            flex: 1;
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            border-radius: 4px;
+            padding: 6px 4px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .flow-node.highlight {
+            border-color: var(--sih-blue);
+            background: rgba(0,114,206,0.05);
+        }
+
+        .flow-node .node-num {
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--sih-blue);
+        }
+
+        .flow-node .node-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .flow-arrow-next {
+            color: var(--sih-blue);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .grid-3-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+        }
+
+        .col-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 3px solid var(--sih-blue);
+            border-radius: 4px;
+            padding: 10px 12px;
+        }
+
+        .col-card-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            font-size: 11.5px;
+            color: var(--text-dark);
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            color: var(--sih-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .why-different-banner {
+            background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%);
+            color: #FFFFFF;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .why-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            width: 140px;
+            flex-shrink: 0;
+        }
+
+        .why-grid {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+            font-size: 11px;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .why-item .check {
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        /* ==========================================================================
+           SLIDE 3 SPECIFIC STYLING — TECHNICAL APPROACH
+           ========================================================================== */
+        .tech-zones-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .zone-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .zone-header {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            border-bottom: 2px solid var(--sih-blue);
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .arch-diagram-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-size: 10.5px;
+        }
+
+        .arch-step-box {
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            border-left: 3px solid var(--sih-blue);
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arch-step-box.highlight {
+            border-left-color: var(--accent-green);
+            background: rgba(16,185,129,0.05);
+        }
+
+        .arch-arrow-down {
+            text-align: center;
+            color: var(--sih-blue);
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 1;
+        }
+
+        .fsm-state-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            font-size: 10px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .fsm-node-item {
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            padding: 3px 6px;
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fsm-node-item.active {
+            border-color: var(--accent-cyan);
+            background: #0F172A;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .tech-stack-row {
+            background: #0F172A;
+            color: #FFFFFF;
+            padding: 10px 16px;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            font-size: 11px;
+        }
+
+        .stack-col-title {
+            color: var(--accent-cyan);
+            font-weight: 800;
+            font-size: 10.5px;
+            margin-bottom: 2px;
+        }
+
+        /* UI Preview Mini Box */
+        .mini-ui-preview {
+            background: #07111F;
+            border: 1px solid #1B2E4B;
+            border-radius: 4px;
+            padding: 6px;
+            color: #C0D0E0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            margin-top: 6px;
+        }
+
+        .mini-ui-header {
+            color: #00FFC8;
+            font-weight: bold;
+            margin-bottom: 4px;
+            font-size: 9.5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* ==========================================================================
+           SLIDE 4 SPECIFIC STYLING — FEASIBILITY AND VIABILITY
+           ========================================================================== */
+        .feasibility-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .feasibility-col {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--sih-blue);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .feasibility-col.risk { border-top-color: var(--accent-red); }
+        .feasibility-col.mitigation { border-top-color: var(--accent-green); }
+        .feasibility-col.viability { border-top-color: var(--accent-cyan); }
+
+        .feasibility-head {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .roadmap-container {
+            background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%);
+            color: #FFFFFF;
+            padding: 12px 16px;
+            border-radius: 6px;
+        }
+
+        .roadmap-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .roadmap-steps {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .roadmap-step {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .roadmap-step.active {
+            border-color: var(--accent-cyan);
+            background: rgba(6,182,212,0.2);
+            color: var(--accent-cyan);
+        }
+
+        /* ==========================================================================
+           SLIDE 5 SPECIFIC STYLING — IMPACT AND BENEFITS
+           ========================================================================== */
+        .impact-blocks-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .impact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .impact-num {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--sih-blue);
+            margin-bottom: 4px;
+        }
+
+        .impact-title {
+            font-size: 11.5px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .impact-desc {
+            font-size: 10.5px;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .target-users-box {
+            background: #F1F5F9;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 12px;
+        }
+
+        .users-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 6px;
+        }
+
+        .users-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .user-tag {
+            background: #FFFFFF;
+            border: 1px solid var(--sih-blue);
+            color: var(--sih-dark-blue);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .impact-summary-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        .summary-box {
+            background: #0F172A;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .summary-box .s-title {
+            color: var(--accent-cyan);
+            font-weight: 800;
+            font-size: 11px;
+            margin-bottom: 2px;
+        }
+
+        .summary-box .s-val {
+            font-size: 10.5px;
+            color: #E2E8F0;
+        }
+
+        /* ==========================================================================
+           SLIDE 6 SPECIFIC STYLING — RESEARCH AND REFERENCES
+           ========================================================================== */
+        .references-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .ref-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--sih-blue);
+            padding: 10px 14px;
+            border-radius: 4px;
+            font-size: 11.5px;
+            line-height: 1.4;
+        }
+
+        .ref-box .ref-num {
+            font-weight: 800;
+            color: var(--sih-blue);
+            margin-right: 4px;
+        }
+
+        .validation-sources-card {
+            background: #F1F5F9;
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            border-radius: 6px;
+        }
+
+        .sources-title {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: var(--sih-dark-blue);
+            margin-bottom: 6px;
+        }
+
+        /* Print formatting */
+        @media print {
+            body { background: none; padding: 0; }
+            .slide-container { page-break-after: always; box-shadow: none; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+         SLIDE 1 — TITLE PAGE
+         ========================================================================== -->
+    <div className="slide-container" id="slide-1">
+        <div className="sih-slide-header">
+            <div className="team-badge">
+                TEAM<br>READY
+            </div>
+            <div className="slide-title-header">SMART INDIA HACKATHON 2025</div>
+            <div className="sih-logo-group">
+                <div className="sih-logo-text">SIH<br>2025</div>
+                <svg className="sih-logo-img" viewBox="0 0 100 100" width="50" height="50">
+                    <circle cx="50" cy="50" r="45" fill="#0072CE"/>
+                    <path d="M30 50 Q 50 20 70 50 Q 50 80 30 50 Z" fill="#FFFFFF"/>
+                    <circle cx="50" cy="50" r="10" fill="#004080"/>
+                </svg>
+            </div>
+        </div>
+
+        <div className="slide-body">
+            <div className="slide-1-content">
+                <div className="sih-header-main-title">TITLE PAGE</div>
+                
+                <div className="sih-title-box">
+                    <div className="project-main-title">ADAPTIVE SOFTWARE-DEFINED SONAR TRANSMITTER FOR AUV</div>
+                    <div className="project-tagline">Real-Time Environmental Adaptation of Sonar Waveforms for High-Quality Mapping & Low-Power Operation</div>
+                </div>
+
+                <div className="title-grid">
+                    <div className="info-card">
+                        <strong>• Problem Statement ID:</strong> SIH1724 (Hardware / Robotics Payload)
+                    </div>
+                    <div className="info-card">
+                        <strong>• Problem Statement Title:</strong> Software-Defined Acoustic Waveform Payload for AUVs
+                    </div>
+                    <div className="info-card">
+                        <strong>• Theme:</strong> Robotics & Drones / Maritime Technology
+                    </div>
+                    <div className="info-card">
+                        <strong>• PS Category:</strong> Hardware
+                    </div>
+                    <div className="info-card">
+                        <strong>• Team ID:</strong> [SIH2025-TEAM-ID]
+                    </div>
+                    <div className="info-card">
+                        <strong>• Team Name:</strong> [Registered Team Name]
+                    </div>
+                </div>
+
+                <div className="hero-architecture-bar">
+                    <div className="hero-step"><span className="icon">🌊</span> ENVIRONMENT SENSING</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="hero-step"><span className="icon">🧠</span> ADAPTIVE DECISION ENGINE</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="hero-step"><span className="icon">⚡</span> WAVEFORM SYNTHESIS</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="hero-step"><span className="icon">🔄</span> DMA+DAC STREAMING</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="hero-step"><span className="icon">📡</span> ACOUSTIC TRANSMISSION</div>
+                </div>
+            </div>
+        </div>
+
+        <div className="sih-footer">
+            <span>@SIH Idea submission- Template</span>
+            <span>1</span>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SLIDE 2 — PROPOSED SOLUTION
+         ========================================================================== -->
+    <div className="slide-container" id="slide-2">
+        <div className="sih-slide-header">
+            <div className="team-badge">TEAM<br>READY</div>
+            <div className="slide-title-header">IDEA TITLE</div>
+            <div className="sih-logo-group">
+                <div className="sih-logo-text">SIH<br>2025</div>
+            </div>
+        </div>
+
+        <div className="slide-body">
+            <div className="section-header-banner">
+                <span>❖ Proposed Solution (Describe your Idea/Solution/Prototype)</span>
+                <span style="font-size: 11px; font-weight: normal;">ASIE Payload Architecture</span>
+            </div>
+
+            <!-- 8-Stage Closed-Loop Diagram -->
+            <div className="flow-diagram-container">
+                <div className="flow-node">
+                    <div className="node-num">01</div>
+                    <div className="node-title">ENVIRONMENT</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node">
+                    <div className="node-num">02</div>
+                    <div className="node-title">ADC SENSING</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node">
+                    <div className="node-num">03</div>
+                    <div className="node-title">CLASSIFICATION</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node highlight">
+                    <div className="node-num">04</div>
+                    <div className="node-title">ADAPT ENGINE</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node">
+                    <div className="node-num">05</div>
+                    <div className="node-title">WAVEFORM LAB</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node">
+                    <div className="node-num">06</div>
+                    <div className="node-title">DMA + DAC</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node">
+                    <div className="node-num">07</div>
+                    <div className="node-title">TRANSMIT</div>
+                </div>
+                <div className="flow-arrow-next">➔</div>
+                <div className="flow-node highlight">
+                    <div className="node-num">08</div>
+                    <div className="node-title">VALIDATE FFT</div>
+                </div>
+            </div>
+
+            <div className="grid-3-col">
+                <div className="col-card">
+                    <div className="col-card-title"><span>🌊</span> WHAT WE SENSE</div>
+                    <ul className="bullet-list">
+                        <li><strong>Turbidity:</strong> Suspended particulates & silt</li>
+                        <li><strong>Depth:</strong> Water column pressure & attenuation</li>
+                        <li><strong>Temperature:</strong> Sound velocity variation</li>
+                        <li><strong>Salinity:</strong> Chemical absorption loss</li>
+                        <li><strong>Battery:</strong> Power supply state-of-charge</li>
+                    </ul>
+                </div>
+
+                <div className="col-card">
+                    <div className="col-card-title"><span>⚡</span> WHAT WE ADAPT</div>
+                    <ul className="bullet-list">
+                        <li><strong>Center Freq (fc):</strong> 50 kHz – 500 kHz span</li>
+                        <li><strong>Bandwidth (BW):</strong> Resolution scaling</li>
+                        <li><strong>Pulse Duration (T):</strong> 0.5 ms – 10.0 ms</li>
+                        <li><strong>Transmit Amplitude:</strong> Power regulation</li>
+                        <li><strong>Waveform Family:</strong> LFM / Geometric / Phase</li>
+                        <li><strong>Windowing:</strong> Hamming / Hann / Blackman</li>
+                    </ul>
+                </div>
+
+                <div className="col-card">
+                    <div className="col-card-title"><span>📊</span> WHAT WE VALIDATE</div>
+                    <ul className="bullet-list">
+                        <li><strong>Cooley-Tukey FFT:</strong> Real-time spectrum</li>
+                        <li><strong>Spectrogram:</strong> Time-frequency distribution</li>
+                        <li><strong>SNR Metric:</strong> Target detection threshold</li>
+                        <li><strong>Frequency Error %:</strong> Digital twin check</li>
+                        <li><strong>Sidelobe Level:</strong> Spectral leakage dB</li>
+                        <li><strong>THD %:</strong> Harmonic distortion check</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Dashboard Evidence Mini UI Card -->
+            <div className="mini-ui-preview">
+                <div className="mini-ui-header">
+                    <span>ASIE SOFTWARE-DEFINED SONAR CONTROL PLATFORM (WORKING EVIDENCE)</span>
+                    <span style="color: #00FF66;">● TRANSMITTER READY</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 2px;">
+                    <div>Env Score: <strong>0.385 [MODERATE]</strong></div>
+                    <div>Mode: <strong>LFM CHIRP</strong></div>
+                    <div>fc: <strong>308.2 kHz</strong></div>
+                    <div>BW: <strong>82.2 kHz</strong></div>
+                    <div>CPU Load: <strong>12.4% (DMA Stream)</strong></div>
+                    <div>Closed-Loop: <strong>ACCEPTED (#1)</strong></div>
+                </div>
+            </div>
+
+            <div className="why-different-banner">
+                <div className="why-title">WHY IT IS DIFFERENT</div>
+                <div className="why-grid">
+                    <div className="why-item"><span className="check">✓</span> Environment-Aware Adaptation</div>
+                    <div className="why-item"><span className="check">✓</span> 3 Waveform Families</div>
+                    <div className="why-item"><span className="check">✓</span> Low-Power DMA Streaming</div>
+                    <div className="why-item"><span className="check">✓</span> Digital Twin Validation</div>
+                </div>
+            </div>
+        </div>
+
+        <div className="sih-footer">
+            <span>@SIH Idea submission- Template</span>
+            <span>2</span>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SLIDE 3 — TECHNICAL APPROACH
+         ========================================================================== -->
+    <div className="slide-container" id="slide-3">
+        <div className="sih-slide-header">
+            <div className="team-badge">TEAM<br>READY</div>
+            <div className="slide-title-header">TECHNICAL APPROACH</div>
+            <div className="sih-logo-group">
+                <div className="sih-logo-text">SIH<br>2025</div>
+            </div>
+        </div>
+
+        <div className="slide-body">
+            <div className="tech-zones-grid">
+                <!-- Zone A: Hardware Architecture -->
+                <div className="zone-box">
+                    <div className="zone-header">ZONE A — HARDWARE ARCHITECTURE</div>
+                    <div className="arch-diagram-flow">
+                        <div className="arch-step-box"><span>SENSORS / POTS</span> <span>ADC Input</span></div>
+                        <div className="arch-arrow-down">↓</div>
+                        <div className="arch-step-box highlight"><span>STM32 MCU</span> <span>ARM Cortex-M4</span></div>
+                        <div className="arch-arrow-down">↓</div>
+                        <div className="arch-step-box"><span>TIM2 + DMA1</span> <span>Circular Stream</span></div>
+                        <div className="arch-arrow-down">↓</div>
+                        <div className="arch-step-box"><span>DAC (12-BIT)</span> <span>Analog Out</span></div>
+                        <div className="arch-arrow-down">↓</div>
+                        <div className="arch-step-box"><span>LOW-PASS FILTER</span> <span>Cutoff Conditioning</span></div>
+                        <div className="arch-arrow-down">↓</div>
+                        <div className="arch-step-box highlight"><span>POWER AMPLIFIER</span> <span>Transducer Drive</span></div>
+                    </div>
+                </div>
+
+                <!-- Zone B: DSP Pipeline -->
+                <div className="zone-box">
+                    <div className="zone-header">ZONE B — DSP & SOFTWARE PIPELINE</div>
+                    <ul className="bullet-list" style="font-size: 10.5px;">
+                        <li><strong>Sensor Acquisition:</strong> ADC sample collection @ 200 kSPS</li>
+                        <li><strong>Env Classification:</strong> Score E = f(turb, depth, temp, sal, bat)</li>
+                        <li><strong>Waveform Synthesis:</strong> LFM chirp / Geo / Phase generator</li>
+                        <li><strong>Digital Windowing:</strong> Hamming/Hann/Blackman tapering</li>
+                        <li><strong>DMA Streaming:</strong> Zero-copy buffer transfer to DAC</li>
+                        <li><strong>Real-Time FFT:</strong> Cooley-Tukey Radix-2 spectral analysis</li>
+                        <li><strong>Quality Evaluation:</strong> SNR & sidelobe threshold check</li>
+                        <li><strong>Closed-Loop Re-opt:</strong> Adaptive parameter recalibration</li>
+                    </ul>
+                </div>
+
+                <!-- Zone C: Embedded FSM -->
+                <div className="zone-box">
+                    <div className="zone-header">ZONE C — EMBEDDED FSM FLOW</div>
+                    <div className="fsm-state-flow">
+                        <div className="fsm-node-item"><span>1. BOOT / POWER-ON</span> <span>[INIT]</span></div>
+                        <div className="fsm-node-item"><span>2. SELF TEST</span> <span>[DIAG]</span></div>
+                        <div className="fsm-node-item"><span>3. READ SENSORS</span> <span>[ADC]</span></div>
+                        <div className="fsm-node-item"><span>4. ADAPT & OPTIMIZE</span> <span>[DSP]</span></div>
+                        <div className="fsm-node-item active"><span>5. DMA + TIMER TRANSMIT</span> <span>[ACTIVE]</span></div>
+                        <div className="fsm-node-item"><span>6. MEASURE & EVALUATE</span> <span>[FFT]</span></div>
+                        <div className="fsm-node-item"><span>7. QUALITY OK?</span> <span>[VALIDATE]</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Stack Row -->
+            <div className="tech-stack-row">
+                <div>
+                    <div className="stack-col-title">EMBEDDED HW</div>
+                    <div>STM32F4 / ARM Cortex-M4 @ 168MHz</div>
+                </div>
+                <div>
+                    <div className="stack-col-title">SIGNAL PROCESSING</div>
+                    <div>Cooley-Tukey FFT / Hamming / LFM</div>
+                </div>
+                <div>
+                    <div className="stack-col-title">HARDWARE INTERFACE</div>
+                    <div>ADC / DAC / TIM2_TRGO / DMA1</div>
+                </div>
+                <div>
+                    <div className="stack-col-title">ANALOG FRONT END</div>
+                    <div>Active Low-Pass Filter & Op-Amp</div>
+                </div>
+                <div>
+                    <div className="stack-col-title">CONTROL DASHBOARD</div>
+                    <div>JavaScript / React / Canvas API</div>
+                </div>
+            </div>
+        </div>
+
+        <div className="sih-footer">
+            <span>@SIH Idea submission- Template</span>
+            <span>3</span>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SLIDE 4 — FEASIBILITY AND VIABILITY
+         ========================================================================== -->
+    <div className="slide-container" id="slide-4">
+        <div className="sih-slide-header">
+            <div className="team-badge">TEAM<br>READY</div>
+            <div className="slide-title-header">FEASIBILITY AND VIABILITY</div>
+            <div className="sih-logo-group">
+                <div className="sih-logo-text">SIH<br>2025</div>
+            </div>
+        </div>
+
+        <div className="slide-body">
+            <div className="feasibility-grid">
+                <!-- Column 1: Technical Feasibility -->
+                <div className="feasibility-col">
+                    <div className="feasibility-head">TECHNICAL FEASIBILITY</div>
+                    <ul className="bullet-list">
+                        <li><strong>STM32 Controller:</strong> 168 MHz ARM Cortex-M4 handles real-time DSP</li>
+                        <li><strong>Hardware Timers:</strong> TIM2_TRGO provides deterministic sample clock</li>
+                        <li><strong>DMA Transfer:</strong> Circular buffer streams samples without CPU load</li>
+                        <li><strong>12-Bit DAC:</strong> High-fidelity physical analog signal output</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Risks & Challenges -->
+                <div className="feasibility-col risk">
+                    <div className="feasibility-head" style="color: var(--accent-red);">RISKS & CHALLENGES</div>
+                    <ul className="bullet-list">
+                        <li><strong>High Sampling Rates:</strong> DAC buffer underruns at high frequencies</li>
+                        <li><strong>Acoustic Attenuation:</strong> Severe scattering in murky waters</li>
+                        <li><strong>Analog Distortion:</strong> Amplifier non-linearity & noise</li>
+                        <li><strong>Power Limits:</strong> AUV battery depletion on long pings</li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Mitigation -->
+                <div className="feasibility-col mitigation">
+                    <div className="feasibility-head" style="color: var(--accent-green);">MITIGATION STRATEGIES</div>
+                    <ul className="bullet-list">
+                        <li><strong>Precomputed Sine LUTs:</strong> Fast lookup table waveform synthesis</li>
+                        <li><strong>Digital Windowing:</strong> Suppresses spectral sidelobes & harmonics</li>
+                        <li><strong>Hardware Low-Pass Filter:</strong> Smooths staircase DAC output</li>
+                        <li><strong>Battery Eco Mode:</strong> Auto-scales amplitude when battery &lt; 25%</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Viability -->
+                <div className="feasibility-col viability">
+                    <div className="feasibility-head" style="color: var(--accent-cyan);">VIABILITY & SCALABILITY</div>
+                    <ul className="bullet-list">
+                        <li><strong>Modular Payload:</strong> Integrates into standard AUV sensor bays</li>
+                        <li><strong>Software-Defined:</strong> Flash-upgradeable waveform library</li>
+                        <li><strong>Low Power:</strong> 82% CPU power savings via DMA streaming</li>
+                        <li><strong>Digital Twin:</strong> In-situ real-time signal validation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visual Maturity Roadmap -->
+            <div className="roadmap-container">
+                <div className="roadmap-title">PROTOTYPE MATURITY & DEVELOPMENT ROADMAP</div>
+                <div className="roadmap-steps">
+                    <div className="roadmap-step active"><span>01</span> DEMO PROTOTYPE (CURRENT)</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="roadmap-step"><span>02</span> LAB TANK VALIDATION</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="roadmap-step"><span>03</span> HARDWARE-IN-LOOP (HIL)</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="roadmap-step"><span>04</span> AUV PAYLOAD INTEGRATION</div>
+                    <div className="hero-arrow">➔</div>
+                    <div className="roadmap-step"><span>05</span> FIELD SEA DEPLOYMENT</div>
+                </div>
+            </div>
+        </div>
+
+        <div className="sih-footer">
+            <span>@SIH Idea submission- Template</span>
+            <span>4</span>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SLIDE 5 — IMPACT AND BENEFITS
+         ========================================================================== -->
+    <div className="slide-container" id="slide-5">
+        <div className="sih-slide-header">
+            <div className="team-badge">TEAM<br>READY</div>
+            <div className="slide-title-header">IMPACT AND BENEFITS</div>
+            <div className="sih-logo-group">
+                <div className="sih-logo-text">SIH<br>2025</div>
+            </div>
+        </div>
+
+        <div className="slide-body">
+            <!-- 5 Numbered Impact Cards -->
+            <div className="impact-blocks-grid">
+                <div className="impact-card">
+                    <div>
+                        <div className="impact-num">01</div>
+                        <div className="impact-title">ADAPTIVE MAPPING</div>
+                    </div>
+                    <div className="impact-desc">Dynamically matches waveform frequency to turbidity & depth</div>
+                </div>
+
+                <div className="impact-card">
+                    <div>
+                        <div className="impact-num">02</div>
+                        <div className="impact-title">RANGE vs RESOLUTION</div>
+                        </div>
+                    <div className="impact-desc">Optimal trade-off between target resolution and penetration</div>
+                </div>
+
+                <div className="impact-card">
+                    <div>
+                        <div className="impact-num">03</div>
+                        <div className="impact-title">82% CPU SAVINGS</div>
+                    </div>
+                    <div className="impact-desc">DMA streaming frees CPU load from 68.2% down to 12.4%</div>
+                </div>
+
+                <div className="impact-card">
+                    <div>
+                        <div className="impact-num">04</div>
+                        <div className="impact-title">REAL-TIME VALIDATION</div>
+                    </div>
+                    <div className="impact-desc">Instant FFT, spectrogram & SNR checks before next ping</div>
+                </div>
+
+                <div className="impact-card">
+                    <div>
+                        <div className="impact-num">05</div>
+                        <div className="impact-title">EXTENDED MISSIONS</div>
+                    </div>
+                    <div className="impact-desc">Battery-aware power limiting extends AUV operation</div>
+                </div>
+            </div>
+
+            <!-- Target Users & Audience -->
+            <div className="target-users-box">
+                <div className="users-title">TARGET USERS & APPLICATION DOMAINS</div>
+                <div className="users-tags">
+                    <span className="user-tag">🌊 Marine Robotics Researchers</span>
+                    <span className="user-tag">⚓ AUV Payload Developers</span>
+                    <span className="user-tag">🗺️ Hydrographic Ocean Survey Teams</span>
+                    <span className="user-tag">🛡️ Naval Defense & Underwater Sensing</span>
+                    <span className="user-tag">🔬 Academic Research Laboratories</span>
+                </div>
+            </div>
+
+            <!-- Summary Impact Metric Row -->
+            <div className="impact-summary-row">
+                <div className="summary-box">
+                    <div className="s-title">TECHNICAL IMPACT</div>
+                    <div className="s-val">Software-Defined Waveform Agility + High SNR</div>
+                </div>
+                <div className="summary-box">
+                    <div className="s-title">RESEARCH IMPACT</div>
+                    <div className="s-val">Flexible, Reconfigurable Marine Experiment Platform</div>
+                </div>
+                <div className="summary-box">
+                    <div className="s-title">OPERATIONAL IMPACT</div>
+                    <div className="s-val">Environment-Aware + Low-Power AUV Payload</div>
+                </div>
+            </div>
+        </div>
+
+        <div className="sih-footer">
+            <span>@SIH Idea submission- Template</span>
+            <span>5</span>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SLIDE 6 — RESEARCH AND REFERENCES
+         ========================================================================== -->
+    <div className="slide-container" id="slide-6">
+        <div className="sih-slide-header">
+            <div className="team-badge">TEAM<br>READY</div>
+            <div className="slide-title-header">RESEARCH AND REFERENCES</div>
+            <div className="sih-logo-group">
+                <div className="sih-logo-text">SIH<br>2025</div>
+            </div>
+        </div>
+
+        <div className="slide-body">
+            <div className="references-grid">
+                <div className="ref-box">
+                    <span className="ref-num">[1]</span> <strong>Urick, R. J. (1983).</strong> "Principles of Underwater Sound." McGraw-Hill, 3rd Edition. <em>(Standard acoustic equations & attenuation models).</em>
+                </div>
+
+                <div className="ref-box">
+                    <span className="ref-num">[2]</span> <strong>Francois, R. E., & Garrison, G. R. (1982).</strong> "Sound absorption in sea water." <em>Journal of the Acoustical Society of America, 72(6), 1879-1890.</em>
+                </div>
+
+                <div className="ref-box">
+                    <span className="ref-num">[3]</span> <strong>Cooley, J. W., & Tukey, J. W. (1965).</strong> "An algorithm for the machine calculation of complex Fourier series." <em>Math. Comput., 19, 297-301.</em>
+                </div>
+
+                <div className="ref-box">
+                    <span className="ref-num">[4]</span> <strong>STMicroelectronics (2021).</strong> "STM32F4xx Reference Manual (RM0090) — DMA & DAC Hardware Peripherals."
+                </div>
+
+                <div className="ref-box">
+                    <span className="ref-num">[5]</span> <strong>Oppenheim, A. V., & Schafer, R. W. (2009).</strong> "Discrete-Time Signal Processing." <em>Prentice Hall (Digital windowing & LFM chirp synthesis).</em>
+                </div>
+
+                <div className="ref-box">
+                    <span className="ref-num">[6]</span> <strong>National Oceanic & Atmospheric Administration (NOAA).</strong> "Side Scan Sonar Operational Guidelines & Frequency Selection."
+                </div>
+            </div>
+
+            <div className="validation-sources-card">
+                <div className="sources-title">PROJECT VALIDATION SOURCES</div>
+                <ul className="bullet-list" style="font-size: 11px;">
+                    <li><strong>Embedded Peripherals:</strong> Verified STM32F4 DAC 12-bit output with DMA1 Stream circular transfers.</li>
+                    <li><strong>DSP Validation:</strong> Verified Cooley-Tukey Radix-2 FFT and Hamming/Hann/Blackman windowing spectral leakage reduction.</li>
+                    <li><strong>Propagation Physics:</strong> Integrated Francois-Garrison attenuation equations for dynamic environmental scoring ($E$).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div className="sih-footer">
+            <span>@SIH Idea submission- Template</span>
+            <span>6</span>
+        </div>
+    </div>
+
+</body>
+</html>
